@@ -16,7 +16,7 @@ const Private = () => {
     const phone = localStorage.getItem('phone')
 
     if (tortId && name && phone) {
-        const tort = torts.find(tort => tort.id == tortId)
+        const tort = torts.find(tort => tort.id === Number(tortId))
         return (
             <div>
                 <h2>Administrator</h2>

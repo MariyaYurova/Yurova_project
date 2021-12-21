@@ -22,7 +22,7 @@ const Tort = () => {
 
             <div className="card">
                 <h2>Торт</h2>
-                <img className='card__image' src={tort.image}/>
+                <img className='card__image' alt="tort-name" src={tort.image}/>
                 <h2>{tort.title}</h2>
                 <p>{tort.description}</p>
                 <span>{tort.price}р</span>
