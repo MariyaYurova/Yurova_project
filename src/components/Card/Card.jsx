@@ -3,14 +3,13 @@ import './Card.css'
 import {useNavigate} from "react-router-dom";
 
 const Card = ({card}) => {
-    const {id, title, description} = card
+    const {id, title, image} = card
     let navigate = useNavigate()
     return (
         <div className="card">
-            <img src={'https://travelmamas.com/wp-content/uploads/2020/04/first_state_usa_square.jpg'} width={100}/>
+            <img className='card__image' src={image} width={100}/>
             <h2>{title}</h2>
-            <p>{description}</p>
-            <button onClick={() => navigate(`/tour/${id}`)}>Перейти</button>
+            <button className="card__button" onClick={() => navigate(`/torts/${id}`)}>Перейти</button>
         </div>
     )
 }

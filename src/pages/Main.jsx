@@ -3,21 +3,23 @@ import Card from "../components/Card/Card";
 import {AppContext} from "../App";
 
 const Main = () => {
-    const {tours} = useContext(AppContext)
+    const {torts} = useContext(AppContext)
 
-    if (!tours.length) {
+    if (!torts.length) {
         return  (
             <div>...Loading</div>
         )
     }
     return (
-        <div>
-            <h1>Tours</h1>
-            {tours.map((card) => {
+        <div className="page">
+            <h1 className="page__title">Торты</h1>
+            <ul className="page__cardbox">
+            {torts.map((card) => {
                 return (
                     <Card key={card.id} card={card}/>
                 )
             })}
+        </ul>
         </div>
     );
 };
