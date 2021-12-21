@@ -7,7 +7,7 @@ const Card = ({card}) => {
     let navigate = useNavigate()
     return (
         <div className="card">
-            <img className='card__image' src={image} width={100}/>
+            <img className='card__image' alt='tort-name' src={image} width={100}/>
             <h2>{title}</h2>
             <button className="card__button" onClick={() => navigate(`/torts/${id}`)}>Перейти</button>
         </div>
